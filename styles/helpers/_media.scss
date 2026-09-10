@@ -11,8 +11,8 @@ $mobile-s: 480.98;
   }
 }
 
-@mixin laptop{
-  @media (width <= rem($laptop)){
+@mixin laptop {
+  @media (width <= rem($laptop)) {
     @content;
   }
 }
@@ -30,7 +30,7 @@ $mobile-s: 480.98;
 }
 
 @mixin mobile-above {
-  @media (width > rem($laptop)) {
+  @media (width > rem($mobile)) {
     @content;
   }
 }
@@ -53,15 +53,15 @@ $mobile-s: 480.98;
   }
 }
 
-@mixin hover ($hasActiveEffectOnMobile:true){
-  @media (any-hover: hover){
+@mixin hover($hasActiveEffectOnMobile:true) {
+  @media (any-hover: hover) {
     &:hover {
       @content;
     }
   }
-  
+
   @if ($hasActiveEffectOnMobile) {
-    @media (any-hover:none) {
+    @media (any-hover: none) {
       &:active {
         @content;
       }
