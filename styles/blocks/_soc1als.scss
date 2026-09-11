@@ -14,7 +14,15 @@
     }
 
     &-link {
+      --size: #{rem(24)};
+
+      @include square(var(--size));
+
       color: var(--color-light);
+
+      @include laptop {
+        --size: #{rem(20)};
+      }
     }
   }
 }
