@@ -130,10 +130,7 @@ class Tabs {
     })
     this.rootElement.addEventListener('keydown', this.onKeyDown)
   }
-
-
 }
-
 
 class TabsCollection {
   constructor() {
