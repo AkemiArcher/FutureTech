@@ -1,3 +1,5 @@
-import Header from "./Header";
+import Header from "./Header"
+import TabsCollection from "./Tabs"
 
-new Header();
+new Header()
+new TabsCollection()
