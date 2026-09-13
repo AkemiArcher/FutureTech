@@ -105,8 +105,8 @@
       display: grid;
       grid-template-columns: 1fr auto;
       grid-template-areas:
-        'other link'
-        'other link';
+      'other link'
+      'other link';
       column-gap: rem(20);
       align-items: center;
     }
