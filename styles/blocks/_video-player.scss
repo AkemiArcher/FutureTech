@@ -25,7 +25,7 @@
     transition-duration: var(--trasition-duraction);
 
     &:not(.is-active) {
-      //@include hide;
+      @include hide;
     }
 
     &::before {
