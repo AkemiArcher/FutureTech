@@ -35,3 +35,7 @@
 @use "blocks/bordered-grid";
 @use "blocks/rating-view";
 @use "blocks/review-card";
+
+.header__promo {
+  display: none;
+}
