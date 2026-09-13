@@ -26,11 +26,18 @@
     &-inner {
       display: grid;
       grid-template-columns: 1fr rem(520);
+
+      @include tablet {
+        display: flex;
+        flex-direction: column-reverse;
+      }
     }
   }
 
   &__content {
-    border-right: var(--border);
+    @include tablet-above {
+      border-right: var(--border);
+    }
   }
 
 
@@ -43,11 +50,26 @@
     @include laptop {
       padding-inline: rem(60);
     }
+
+    @include tablet {
+      padding-inline: 0;
+    }
   }
 
   &__intro,
+  &__actions,
+  &__summary {
+    @include tablet {
+      @include full-vw-centered-line(bottom);
+    }
+  }
+
+
+  &__intro,
   &__actions {
-    border-bottom: var(--border);
+    @include tablet-above {
+      border-bottom: var(--border);
+    }
   }
 
   &__actions {
@@ -55,6 +77,16 @@
   }
 
   &__body {
+    --initialMaxHeight: #{rem(741)};
+
+    @include laptop {
+      --initialMaxHeight: #{rem(692)};
+    }
+
+    @include laptop {
+      --initialMaxHeight: #{rem(669)};
+    }
+
     h2, h3, h4, h5, h6 {
       &:not(:first-child) {
         margin-top: 1.5em;
