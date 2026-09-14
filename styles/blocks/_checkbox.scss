@@ -6,7 +6,7 @@
   column-gap: rem(10);
   color: var(--color-light);
   transition-duration: var(--trasition-duraction);
-  
+
   @include laptop {
     column-gap: rem(6);
   }
