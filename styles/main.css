@@ -652,6 +652,11 @@ button[aria-laber]::before {
     font-size: 0.75rem;
   }
 }
+@media (width <= 30.06125rem) {
+  .header__promo-link .icon {
+    column-gap: 0.3125rem;
+  }
+}
 .header__body {
   padding-block: 1.5rem;
   background-color: var(--color-dark-10);
@@ -779,6 +784,16 @@ button[aria-laber]::before {
 @media (width <= 90.06125rem) {
   .soc1als--3-cols .soc1als__link {
     height: 3rem;
+  }
+}
+@media (any-hover: hover) {
+  .soc1als--3-cols .soc1als__link:hover {
+    border-color: var(--color-accent);
+  }
+}
+@media (any-hover: none) {
+  .soc1als--3-cols .soc1als__link:active {
+    border-color: var(--color-accent);
   }
 }
 .soc1als__item {
@@ -918,6 +933,7 @@ button[aria-laber]::before {
 .metrics__item {
   display: flex;
   flex-direction: column-reverse;
+  justify-content: start;
   row-gap: 0.625rem;
   padding: 3.125rem;
 }
@@ -2459,6 +2475,9 @@ button[aria-laber]::before {
 .field__control::placeholder {
   color: var(--color-dark-40);
 }
+.field__control:user-invalid {
+  border-color: var(--color-red);
+}
 .field textarea.field__control {
   resize: vertical;
   min-height: 10.1875rem;
@@ -2653,6 +2672,9 @@ button[aria-laber]::before {
 .checkbox__input:not(:checked)::after {
   opacity: 0;
   visibility: hidden;
+}
+.checkbox__input:user-invalid {
+  border-color: var(--color-red);
 }
 .checkbox__input::after {
   content: "✓";

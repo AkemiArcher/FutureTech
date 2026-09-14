@@ -29,7 +29,13 @@
       font-size: rem(12);
     }
 
-    
+    &-link {
+      .icon {
+        @include mobile-s {
+          column-gap: rem(5);
+        }
+      }
+    }
   }
 
   &__body {
