@@ -1129,7 +1129,7 @@ button[aria-laber]::before {
   grid-area: resources-preview;
   padding-left: 5rem;
   padding-bottom: 5rem;
-  background: url("../../images/hero/1.png") 0 0/cover no-repeat;
+  background: url("/../../images/hero/1.png") 0 0/cover no-repeat;
 }
 @media (width <= 90.06125rem) {
   .hero__resources-preview {
