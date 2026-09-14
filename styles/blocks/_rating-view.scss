@@ -21,10 +21,10 @@
 
     @include square(var(--size));
 
-    background: url("../../icons/star-gray.svg") center/contain no-repeat;
+    background: url("/icons/star-gray.svg") center/contain no-repeat;
 
     &.is-active {
-      background: url("../../icons/star-yellow.svg") center/contain no-repeat;
+      background: url("/icons/star-yellow.svg") center/contain no-repeat;
     }
 
     @include laptop {
