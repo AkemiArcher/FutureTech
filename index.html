@@ -19,10 +19,7 @@
   <script defer src="scripts/app.js" type="module"></script>
 </head>
 <body>
-<header
-  class="header"
-  data-js-header
->
+<header class="header" data-js-header>
   <div class="header__promo">
     <div class="header__promo-inner container">
       <a
@@ -37,24 +34,19 @@
   </div>
   <div class="header__body">
     <div class="header__body-inner container">
-      <a
-        aria-label="Home"
-        class="header__logo logo"
-        href="/"
-        title="Home"
+      <a class="header__logo logo"
+         aria-label="Home"
+         href="/"
+         title="Home"
       >
-        <img
-          alt=""
-          class="logo__image"
-          height="50"
-          src="images/logo.svg"
-          width="179"
+        <img class="logo__image"
+             alt=""
+             height="50"
+             src="images/logo.svg"
+             width="179"
         >
       </a>
-      <div
-        class="header__overlay"
-        data-js-header-overlay
-      >
+      <div class="header__overlay" data-js-header-overlay>
         <nav class="header__menu">
           <ul class="header__menu-list">
             <li class="header__menu-item">
@@ -87,18 +79,15 @@
             </li>
           </ul>
         </nav>
-        <a
-          class="header__contact-us-link button button--accent"
-          href="./contacts.html"
-        >
-          Contact Us
+        <a class="header__contact-us-link button button--accent"
+           href="./contacts.html"
+        >Contact Us
         </a>
       </div>
-      <button
-        aria-label="Open menu"
-        class="header__burger-button burger-button visible-mobile"
-        data-js-burger-button
-        type="button"
+      <button class="header__burger-button burger-button visible-mobile"
+              aria-label="Open menu"
+              data-js-burger-button
+              type="button"
       >
         <span class="burger-button__line"></span>
         <span class="burger-button__line"></span>
@@ -401,9 +390,11 @@
           <h2 class="section__title" id="blog-title">Explore FutureTech's In-Depth Blog Posts
           </h2>
         </div>
-        <a href="./blog.html" class="section__link button">
-          <span class="icon icon--yellow-arrow">View All Blogs</span>
-        </a>
+        <div class="section__actions">
+          <a href="./blog.html" class="section__link button">
+            <span class="icon icon--yellow-arrow">View All Blogs</span>
+          </a>
+        </div>
       </div>
     </header>
     <div class="section__body tabs" data-js-tabs>
@@ -880,8 +871,8 @@
   </section>
 
   <section class="section" aria-labelledby="resources-title">
-    <header class="section__header">
-      <div class="section__header-inner container">
+    <header class="section__header ">
+      <div class="section__header-inner container ">
         <div class="section__header-info">
           <p class="section__subtitle tag">Your Gateway to In-Depth Information</p>
           <h2
@@ -890,9 +881,11 @@
           >Unlock Valuable Knowledge with FutureTech's Resources
           </h2>
         </div>
-        <a href="/" class="section__link button">
-          <span class="icon icon--yellow-arrow">View All Resources</span>
-        </a>
+        <div class="section__actions">
+          <a href="/" class="section__link button">
+            <span class="icon icon--yellow-arrow">View All Resources</span>
+          </a>
+        </div>
       </div>
     </header>
     <div class="section__body">
@@ -1120,9 +1113,11 @@
           >Real Words from Real Readers
           </h2>
         </div>
-        <a href="/" class="section__link button">
-          <span class="icon icon--yellow-arrow">View All Testimonials</span>
-        </a>
+        <div class="section__actions">
+          <a href="/" class="section__link button">
+            <span class="icon icon--yellow-arrow">View All Testimonials</span>
+          </a>
+        </div>
       </div>
     </header>
     <div class="section__body">
