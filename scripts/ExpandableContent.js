@@ -1,4 +1,4 @@
-import pixToRem from "./utils/pixToRem";
+import pixToRem from "./utils/pixToRem.js";
 
 const rootSelector = "[data-js-expandable-content]"
 
