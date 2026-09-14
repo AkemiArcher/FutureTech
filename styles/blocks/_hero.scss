@@ -74,7 +74,7 @@
     grid-area: resources-preview;
     padding-left: rem(80);
     padding-bottom: rem(80);
-    background: url("images/hero/1.png") 0 0/cover no-repeat;
+    background: url("/images/hero/1.png") 0 0/cover no-repeat;
 
     @include laptop {
       padding-left: rem(50);
