@@ -23,19 +23,19 @@
 
   &--yellow-arrow {
     &::after {
-      background-image: url('/icons/arrow-top-right_yellow.svg');
+      background-image: url('../icons/arrow-top-right_yellow.svg');
     }
   }
 
   &--yellow-eye {
     &::after {
-      background-image: url('images/resources/eye-icon.svg');
+      background-image: url('../images/resources/eye-icon.svg');
     }
   }
-
+ 
   &--gray-arrow-down {
     &::after {
-      background-image: url('icons/arrow-down-icon.svg');
+      background-image: url('../icons/arrow-down-icon.svg');
     }
   }
 }
