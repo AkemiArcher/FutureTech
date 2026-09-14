@@ -136,6 +136,11 @@ class Select extends BaseComponent {
     return (!this.state.isExpanded && isButtonFocused)
   }
 
+
+  selectedCurrentOption() {
+    this.state.selectedOptionElement = this.optionElements[this.state.currentOptionIndex]
+  }
+
   onButtonClick = () => {
     this.toggleExpandedState()
   }
@@ -145,11 +150,19 @@ class Select extends BaseComponent {
       this.expand()
       return
     }
+
+    if (this.state.currentOptionIndex > 0) {
+      this.state.currentOptionIndex--
+    }
+
   }
   onArrowDownKeyDown = () => {
     if (this.isNeedToExpand) {
       this.expand()
       return
+    }
+    if (this.state.currentOptionIndex < this.optionElements.length - 1) {
+      this.state.currentOptionIndex++
     }
   }
 
@@ -158,6 +171,8 @@ class Select extends BaseComponent {
       this.expand()
       return
     }
+    this.selectedCurrentOption()
+    this.collapse()
   }
 
   onEnterDown = () => {
@@ -165,6 +180,8 @@ class Select extends BaseComponent {
       this.expand()
       return
     }
+    this.selectedCurrentOption()
+    this.collapse()
   }
 
   onKeyDown = (event) => {
@@ -191,6 +208,12 @@ class Select extends BaseComponent {
     MatchMedia.mobile.addEventListener('change', this.onMobileMatchMediaChange)
     this.buttonElement.addEventListener('click', this.onButtonClick)
     document.addEventListener('click', this.onClick)
+    this.rootElement.addEventListener('keydown', this.onKeyDown)
+    this.originalControlElement.addEventListener('change', this.onOriginalControlChange)
+  }
+
+  onOriginalControlChange = () => {
+    this.state.selectedOptionElement = this.optionElements[this.originalControlElement.selectedIndex]
   }
 
   onClick = (event) => {
@@ -207,11 +230,12 @@ class Select extends BaseComponent {
     if (isOptionClick) {
       this.state.selectedOptionElement = target
       this.state.currentOptionIndex = [...this.optionElements].findIndex((optionElement) => {
-        optionElement === target
+        return optionElement === target
       })
       this.collapse()
     }
   }
+
 }
 
 
