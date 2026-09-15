@@ -1731,10 +1731,10 @@ button[aria-laber]::before {
         Элементы в 1-й и 2-й колонке
      */
   }
-  .bordered-grid--3-cols .bordered-grid__item:nth-child(3n-2), .bordered-grid--3-cols .bordered-grid__item:nth-child(3n-1) {
+  .bordered-grid--3-cols .bordered-grid__item:nth-child(3n), .bordered-grid--3-cols .bordered-grid__item:nth-child(3n-1) {
     position: relative;
   }
-  .bordered-grid--3-cols .bordered-grid__item:nth-child(3n-2)::after, .bordered-grid--3-cols .bordered-grid__item:nth-child(3n-1)::after {
+  .bordered-grid--3-cols .bordered-grid__item:nth-child(3n)::after, .bordered-grid--3-cols .bordered-grid__item:nth-child(3n-1)::after {
     content: "";
     position: absolute;
     top: 0;
